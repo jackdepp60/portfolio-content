@@ -11,55 +11,131 @@
       line-height: 1.6;
     }
 
+    .logo {
+        width: 100px;
+    }
+
     .navbar {
         position: sticky !important;
-        z-index: 1;
+        z-index: 4;
         top: 0;
         height: 80px;
         box-shadow: 0 2px 9px 2px rgba(128, 128, 128, 0.208);
     }
 
     header {
-      padding: 2rem;
+      position: relative;
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
       text-align: center;
-      background: #1a1a1a;
     }
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+    header img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Keeps aspect ratio without stretching */
+      opacity: 1;
+      z-index: 1;
+      transition: .6s ease-in-out;
+    }
+
+    header:hover img {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+
+    header::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+        z-index: 2;
+    }
+
+    header h1,
+    header p,
+    header span {
+        position: relative;
+        z-index: 2;
+        margin: 5px 0;
     }
 
     header p {
-      font-size: 1.2rem;
-      color: #aaa;
+        color: #ffffff;
+        font-size: 1.5rem;
     }
 
-    .profile-name {
-        color: white;
+    header .profile-name {
+        font-size: 3.5em;
+        font-weight: bold;
+        color: #fbb040;
     }
-    span {
-        color: white;
+
+    header span {
+      font-size: 0.9em;
+      color: #dbdbdb;
+    }
+    /* Center all text vertically and horizontally */
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .about {
+        animation: fadeIn 2.7s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .about p {
         font-size: 1.5rem;
+        text-align: center;
+        padding: 2rem 10%;
     }
 
     section {
       padding: 1rem 2rem;
-      max-width: 900px;
-      margin: 0 auto;
+      max-width: auto;
+      margin:30px auto 80px auto;
     }
 
     .section-title {
       font-size: 1.8rem;
       margin-bottom: 1.5rem;
-      display: inline-block;
+      text-align: center;
+      margin-bottom: 60px;
     }
 
-
-    section .portfolio {
-        margin-bottom: -100px;
+    .portfolio {
+        background-color: rgba(199, 195, 186, 0.242);
+        padding-top: 20px;
+        padding-bottom: 50px;
     }
 
+    .projects a {
+        list-style-type: none;
+        text-decoration: none;
+        color: black;
+    }
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -85,6 +161,10 @@
 
     .project h3 {
       margin-bottom: 0.5rem;
+    }
+
+    .contact {
+        text-align: center;
     }
 
     .contact a {
