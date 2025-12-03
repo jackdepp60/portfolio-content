@@ -5,15 +5,13 @@
 
 These are some small projects I made using C# and .NET Framework
 
-## Projects:
+Projects:
+[Car Insurance]
+[Code-First Student Registry]
 
-- [Car Insurance](#car-insurance)
-- [Code-First Student Registry]()
-
-## Car Insurance
-
+Car Insurance
 This project is an MVC web application that mimics a car insurance website. It takes user's input on policy information and calculates a quote based on business logic. There is also an admin page that allows staff to view all of the quotes that have been issued.
 
-## NFL Stats
+Code-First Student Registry
+This project is about coding the logic and class while connecting and creating the database in the background/abstract. Without manually creating the database connection using interfaces. This is what the code-first method is about.
 
-This is a data visualization application that is meant to store and display football stats for the purposes of fantasy football. It is an MVC web application that utilizes Entity Framework 6 for data access and a Code First workflow. It is still a work in progress.
